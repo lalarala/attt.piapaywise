@@ -16,14 +16,33 @@ from django.http import HttpResponse
 
 from polls.models import Question, Choice
 
+
+def index(request):    
+    return render(request, 'polls/index.html')
+
+
+def contact(request):    
+    return render(request, 'polls/contact.html')
+
+
+def about(request):    
+    return render(request, 'polls/about.html')
+
+
+
+
+
+
+
 def ultimas_perguntas(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/perguntas.html', context)
 
-def index(request):
-    #return HttpResponse('Olá... seja bem vindo a enquete')
- return render(request, 'home.html')
+
+
+
+
 def sobre(request):
     return HttpResponse('Este é um app de enquete!')
 

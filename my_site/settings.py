@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 DATABASES = {
       'default': {
                 'ENGINE': 'django.db.backends.mysql',
-                'NAME': 'django_polls_db',
+                'NAME': 'paywisedb',
                 'USER': 'root',
                 'PASSWORD': '',
                 'HOST': 'localhost',

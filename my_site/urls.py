@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path("polls/", include("polls.urls")),
+    path("", include("polls.urls")),
     path('admin/', admin.site.urls),
     path('', include('accounts.urls')), # rotas personalizadas como accounts/signup
     path('accounts/', include('django.contrib.auth.urls')), # rotas padrão fornecida pelo Django
